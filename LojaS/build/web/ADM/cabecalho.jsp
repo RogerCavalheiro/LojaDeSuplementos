@@ -50,16 +50,17 @@
         <div class="mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Área Administrativa</h3>
+          <h3>Runeterra Suplementos</h3>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class=" mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="../login.jsp" class="mdl-layout__tab">Login</a>
+          <a href="../ADM/login.jsp" class="mdl-layout__tab">Login</a>
           <a href="../index.jsp" class="mdl-layout__tab">Menu</a>
-          <a href="../categoria/list.jsp" class="mdl-layout__tab">Categoria</a>
-          <a href="../jogador/list.jsp" class="mdl-layout__tab">Jogador</a>
-          <a href="../pergunta/list.jsp" class="mdl-layout__tab">Pergunta</a>
+          <a href="../ADM/suplementos/list.jsp" class="mdl-layout__tab">Suplementos</a>
+          <a href="../ADM/cliente/list.jsp" class="mdl-layout__tab">Cliente</a>
+          <a href="../ADM/categoria/list.jsp" class="mdl-layout__tab">Categoria</a>
+          <a href="../site.jsp" class="mdl-layout__tab">Site</a>
           
         </div>
       </header>

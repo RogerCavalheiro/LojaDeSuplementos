@@ -18,11 +18,6 @@
                         <label class="mdl-textfield__label" for="txtCliente">Nome</label>
                     </div>
                 </div>
-                <div class="mdl-cell--12-col"> 
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required  name="txtNome" />
-                        <label class="mdl-textfield__label" for="txtNome">Email</label>
-                    </div>
              
 
                 

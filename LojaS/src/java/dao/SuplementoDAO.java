@@ -4,6 +4,7 @@
     import java.util.List ;
     import javax.persistence.EntityManager ;
     import javax.persistence.EntityManagerFactory ;
+import javax.persistence.TypedQuery;
     import modelo.Suplemento ;
 
     /**
@@ -36,7 +37,7 @@
         }
 
         public List<Suplemento> listar() throws Exception {
-            return em.createNamedQuery("Classe.findAll").getResultList();
+            return em.createNamedQuery("Suplemento.findAll").getResultList();
         }
         
         public void alterar(Suplemento obj) throws Exception {
@@ -52,6 +53,22 @@
                 // em.close();
             }
         }
+         public Suplemento realizarLogin(String login, String senha) 
+    {
+        TypedQuery<Suplemento> query = 
+                em.createNamedQuery("Jogador.realizarLogin", Suplemento.class); 
+        
+        query.setParameter("login", login); 
+        query.setParameter("senha", senha); 
+        Suplemento suplemento; 
+        try { 
+            suplemento= query.getSingleResult(); 
+        } catch (Exception e) { 
+            suplemento = null ; 
+        }
+        
+        return suplemento;
+    }
         
         public void excluir(Suplemento obj) throws Exception {
             

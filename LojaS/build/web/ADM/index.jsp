@@ -1,20 +1,21 @@
-<%@page import="modelo.Cliente"%>
-<%@page import="dao.ClienteDAO"%>
-<%@include file="cabecalho-index.jsp"%>
+
+<%@page import="modelo.Suplemento"%>
+<%@page import="dao.SuplementoDAO"%>
+<%@include file="cabecalho.jsp"%>
 <%
 String mensagem = ""; 
     if(request.getParameter("txtEntrarLogin")!=null && 
         request.getParameter("txtEntrarSenha")!=null) 
     { 
-        ClienteDAO dao = new ClienteDAO(); 
-        Cliente Cliente; 
+        SuplementoDAO dao = new SuplementoDAO(); 
+        Suplemento Suplemento; 
         String login = request.getParameter("txtEntrar Login"); 
         String senha = request.getParameter("txtEntrarSenha"); 
         
-        Cliente = dao.realizarLogin(login, senha); 
-        if(Cliente !=null) 
+        Suplemento = dao.realizarLogin(login, senha); 
+        if(Suplemento !=null) 
         { 
-            session.setAttribute("cliente", Cliente);
+            session.setAttribute("suplemento", Suplemento);
             response.sendRedirect("site.jsp");
         }
         else 
