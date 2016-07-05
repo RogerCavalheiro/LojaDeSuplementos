@@ -1,5 +1,5 @@
  
-<section class="section--footer mdl-color--white mdl-grid">
+<section class="section--footer mdl-color--grey-100 mdl-grid">
 
 </section>
 </div>
@@ -11,7 +11,7 @@
 
 <footer class="mdl-mega-footer">
     <div class="mdl-mega-footer--middle-section">
-       Runeterra Suplementos
+        <i>Runeterra Suplementos</i>
     </div>
 </footer>
 </main>

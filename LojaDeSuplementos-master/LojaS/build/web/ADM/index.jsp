@@ -1,4 +1,3 @@
-
 <%@page import="modelo.Suplemento"%>
 <%@page import="dao.SuplementoDAO"%>
 <%@include file="cabecalho.jsp"%>
@@ -30,7 +29,15 @@ String mensagem = "";
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
     <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
-            <h4>Gerenciamento do Sistema</h4>
+            
+            <h1 Style="text-align:center"<i>Runeterra Suplementos</i></h1>
+            <h4>
+                <center>Sobre Nós</center> <br>
+
+  A busca por hábitos saudáveis e pelo corpo em forma, tem se tornado a cada dia, não somente um luxo, mas uma necessidade para quem valoriza e sabe o que é qualidade de vida.
+  Por isso os profissionais da Runeterra Suplementos vem proporcionando a maior variedade de suplementos alimentares e acessórios esportivos, nacionais e importados, para que você alcance o seu objetivo com eficiência.
+
+Nosso compromisso é atendê-lo da melhor maneira, com qualidade, variedade e os melhores preços do mercado.</h4>
           
         </div>
 

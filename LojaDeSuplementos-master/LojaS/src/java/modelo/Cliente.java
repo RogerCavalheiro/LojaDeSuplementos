@@ -5,11 +5,12 @@
  */
 package modelo;
 
-import dao.*;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -17,7 +18,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Aluno
+ * @author TurtleDAO
  */
 @Entity
 @Table(name = "cliente")
@@ -33,18 +34,19 @@ public class Cliente implements Serializable {
     @Column(name = "email")
     private String email;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "cliente")
-    private Long cliente;
+    private Integer cliente;
 
     public Cliente() {
     }
 
-    public Cliente(Long cliente) {
+    public Cliente(Integer cliente) {
         this.cliente = cliente;
     }
 
-    public Cliente(Long cliente, String nome, String email) {
+    public Cliente(Integer cliente, String nome, String email) {
         this.cliente = cliente;
         this.nome = nome;
         this.email = email;
@@ -66,11 +68,11 @@ public class Cliente implements Serializable {
         this.email = email;
     }
 
-    public Long getCliente() {
+    public Integer getCliente() {
         return cliente;
     }
 
-    public void setCliente(Long cliente) {
+    public void setCliente(Integer cliente) {
         this.cliente = cliente;
     }
 

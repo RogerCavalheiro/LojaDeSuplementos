@@ -5,13 +5,16 @@
  */
 package modelo;
 
-import dao.*;
+import modelo.Supleente;
+import modelo.Categoria;
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -22,7 +25,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Aluno
+ * @author TurtleDAO
  */
 @Entity
 @Table(name = "suplemento")
@@ -35,9 +38,10 @@ public class Suplemento implements Serializable {
     @Column(name = "nome_suple")
     private String nomeSuple;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "suplemento")
-    private Long suplemento;
+    private Integer suplemento;
     @Basic(optional = false)
     @Column(name = "quantidade")
     private int quantidade;
@@ -45,16 +49,16 @@ public class Suplemento implements Serializable {
     @ManyToOne(optional = false)
     private Categoria categoria;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "suplemento")
-    private Collection<Supleente> supleenteCollection;
+    private List<Supleente> supleenteList;
 
     public Suplemento() {
     }
 
-    public Suplemento(Long suplemento) {
+    public Suplemento(Integer suplemento) {
         this.suplemento = suplemento;
     }
 
-    public Suplemento(Long suplemento, String nomeSuple, int quantidade) {
+    public Suplemento(Integer suplemento, String nomeSuple, int quantidade) {
         this.suplemento = suplemento;
         this.nomeSuple = nomeSuple;
         this.quantidade = quantidade;
@@ -68,11 +72,11 @@ public class Suplemento implements Serializable {
         this.nomeSuple = nomeSuple;
     }
 
-    public Long getSuplemento() {
+    public Integer getSuplemento() {
         return suplemento;
     }
 
-    public void setSuplemento(Long suplemento) {
+    public void setSuplemento(Integer suplemento) {
         this.suplemento = suplemento;
     }
 
@@ -92,12 +96,12 @@ public class Suplemento implements Serializable {
         this.categoria = categoria;
     }
 
-    public Collection<Supleente> getSupleenteCollection() {
-        return supleenteCollection;
+    public List<Supleente> getSupleenteList() {
+        return supleenteList;
     }
 
-    public void setSupleenteCollection(Collection<Supleente> supleenteCollection) {
-        this.supleenteCollection = supleenteCollection;
+    public void setSupleenteList(List<Supleente> supleenteList) {
+        this.supleenteList = supleenteList;
     }
 
     @Override

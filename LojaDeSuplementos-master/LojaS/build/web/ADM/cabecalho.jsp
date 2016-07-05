@@ -14,7 +14,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gerenciamento de Sistemas</title>
+        <title Style="text-align:center">Runeterra Suplementos</title>
 
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes">
@@ -44,23 +44,25 @@
        
     </head>
     
-<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<body class="mdl-demo mdl-color--blue mdl-color-text--black mdl-base">
+    
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--blue">
         <div class="mdl-layout__header-row">
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Runeterra Suplementos</h3>
+         <div class="mdl-layout--large-screen-only mdl-layout__header-row mdl-color--black">
+                               <h3 Style="text-align:center">Runeterra Suplementos</h3> 
+                               
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        <div  class="mdl-layout--large-screen-only mdl-layout__header-row ">
         </div>
-        <div class=" mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="../ADM/login.jsp" class="mdl-layout__tab">Login</a>
-          <a href="../index.jsp" class="mdl-layout__tab">Menu</a>
-          <a href="../ADM/suplemento/list.jsp" class="mdl-layout__tab">Suplementos</a>
-          <a href="../ADM/cliente/list.jsp" class="mdl-layout__tab">Cliente</a>
-          <a href="../ADM/categoria/list.jsp" class="mdl-layout__tab">Categoria</a>
-          <a href="../site.jsp" class="mdl-layout__tab">Site</a>
+          <div class=" mdl-js-ripple-effect mdl-color--black "> 
+           <a href="../ADM/login.jsp" class="mdl-layout__tab mdl-color--red">Login</a> 
+           <a href="   index.jsp" class="mdl-layout__tab mdl-color--green">Menu</a>   
+           <a href="../ADM/suplemento/list.jsp" class="mdl-layout__tab mdl-color--orange">Suplementos</a> 
+           <a href="../ADM/cliente/list.jsp" class="mdl-layout__tab mdl-color--pink ">Cliente</a> 
+           <a href="../ADM/categoria/list.jsp" class="mdl-layout__tab mdl-color--brown">Categoria</a> 
+           <a href="../site.jsp" class="mdl-layout__tab mdl-color--purple">Site</a> 
           
         </div>
       </header>

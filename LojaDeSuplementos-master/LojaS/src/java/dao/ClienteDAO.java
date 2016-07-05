@@ -5,18 +5,18 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import modelo.Cliente;
 
+
 /**
  *
  * @author marcelosiedler
  */
 public class ClienteDAO {
-
     EntityManager em;
     
     public ClienteDAO() throws Exception {
         EntityManagerFactory emf;
         emf = Conexao.getConexao();
-        em = emf.createEntityManager();
+        em =  emf.createEntityManager();
     }
     
     public void incluir(Cliente obj) throws Exception {
@@ -33,9 +33,8 @@ public class ClienteDAO {
         }
         
     }
-
     public List<Cliente> listar() throws Exception {
-        return em.createNamedQuery("Classe.findAll").getResultList();
+        return em.createNamedQuery("Cliente.findAll").getResultList();
     }
     
     public void alterar(Cliente obj) throws Exception {
@@ -48,7 +47,7 @@ public class ClienteDAO {
             em.getTransaction().rollback();
             throw e;
         } finally {
-            // em.close();
+           // em.close();
         }
     }
     
@@ -64,10 +63,16 @@ public class ClienteDAO {
             //em.close();
         }
     }
-
     public void fechaEmf() {
         em.close();
         Conexao.closeConexao();
     }
+
+
+
+
+
+
     
+
 }

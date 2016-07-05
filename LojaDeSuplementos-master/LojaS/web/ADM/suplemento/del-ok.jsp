@@ -14,5 +14,5 @@
 
 </section>
 
-<%@include file="../../rodape.jsp"%>
+<%@include file="../rodape-index.jsp"%>
 

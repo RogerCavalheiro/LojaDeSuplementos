@@ -5,13 +5,14 @@
  */
 package modelo;
 
-import dao.*;
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -20,42 +21,43 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Aluno
+ * @author TurtleDAO
  */
 @Entity
 @Table(name = "categoria")
-@NamedQueries({
+    @NamedQueries({
     @NamedQuery(name = "Categoria.findAll", query = "SELECT c FROM Categoria c")})
 public class Categoria implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "categoria")
-    private Long categoria;
+    private Integer categoria;
     @Basic(optional = false)
     @Column(name = "nome_categoria")
     private String nomeCategoria;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "categoria")
-    private Collection<Suplemento> suplementoCollection;
+    private List<Suplemento> suplementoList;
 
     public Categoria() {
     }
 
-    public Categoria(Long categoria) {
+    public Categoria(Integer categoria) {
         this.categoria = categoria;
     }
 
-    public Categoria(Long categoria, String nomeCategoria) {
+    public Categoria(Integer categoria, String nomeCategoria) {
         this.categoria = categoria;
         this.nomeCategoria = nomeCategoria;
     }
 
-    public Long getCategoria() {
+    public Integer getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Long categoria) {
+    public void setCategoria(Integer categoria) {
         this.categoria = categoria;
     }
 
@@ -67,12 +69,12 @@ public class Categoria implements Serializable {
         this.nomeCategoria = nomeCategoria;
     }
 
-    public Collection<Suplemento> getSuplementoCollection() {
-        return suplementoCollection;
+    public List<Suplemento> getSuplementoList() {
+        return suplementoList;
     }
 
-    public void setSuplementoCollection(Collection<Suplemento> suplementoCollection) {
-        this.suplementoCollection = suplementoCollection;
+    public void setSuplementoList(List<Suplemento> suplementoList) {
+        this.suplementoList = suplementoList;
     }
 
     @Override

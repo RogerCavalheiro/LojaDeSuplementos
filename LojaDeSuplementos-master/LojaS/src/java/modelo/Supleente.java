@@ -5,11 +5,12 @@
  */
 package modelo;
 
-import dao.*;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -19,7 +20,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Aluno
+ * @author TurtleDAO
  */
 @Entity
 @Table(name = "supleente")
@@ -29,9 +30,10 @@ public class Supleente implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "supleente")
-    private Long supleente;
+    private Integer supleente;
     @Basic(optional = false)
     @Column(name = "comentario")
     private String comentario;
@@ -40,7 +42,7 @@ public class Supleente implements Serializable {
     private int avaliacao;
     @Basic(optional = false)
     @Column(name = "cliente")
-    private long cliente;
+    private int cliente;
     @JoinColumn(name = "suplemento", referencedColumnName = "suplemento")
     @ManyToOne(optional = false)
     private Suplemento suplemento;
@@ -48,22 +50,22 @@ public class Supleente implements Serializable {
     public Supleente() {
     }
 
-    public Supleente(Long supleente) {
+    public Supleente(Integer supleente) {
         this.supleente = supleente;
     }
 
-    public Supleente(Long supleente, String comentario, int avaliacao, long cliente) {
+    public Supleente(Integer supleente, String comentario, int avaliacao, int cliente) {
         this.supleente = supleente;
         this.comentario = comentario;
         this.avaliacao = avaliacao;
         this.cliente = cliente;
     }
 
-    public Long getSupleente() {
+    public Integer getSupleente() {
         return supleente;
     }
 
-    public void setSupleente(Long supleente) {
+    public void setSupleente(Integer supleente) {
         this.supleente = supleente;
     }
 
@@ -83,11 +85,11 @@ public class Supleente implements Serializable {
         this.avaliacao = avaliacao;
     }
 
-    public long getCliente() {
+    public int getCliente() {
         return cliente;
     }
 
-    public void setCliente(long cliente) {
+    public void setCliente(int cliente) {
         this.cliente = cliente;
     }
 

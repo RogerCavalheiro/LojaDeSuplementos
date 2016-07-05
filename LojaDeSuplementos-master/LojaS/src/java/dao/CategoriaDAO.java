@@ -10,13 +10,12 @@ import modelo.Categoria;
  * @author marcelosiedler
  */
 public class CategoriaDAO {
-
     EntityManager em;
     
     public CategoriaDAO() throws Exception {
         EntityManagerFactory emf;
         emf = Conexao.getConexao();
-        em = emf.createEntityManager();
+        em =  emf.createEntityManager();
     }
     
     public void incluir(Categoria obj) throws Exception {
@@ -33,7 +32,7 @@ public class CategoriaDAO {
         }
         
     }
-
+       
     public List<Categoria> listar() throws Exception {
         return em.createNamedQuery("Categoria.findAll").getResultList();
     }
@@ -48,7 +47,7 @@ public class CategoriaDAO {
             em.getTransaction().rollback();
             throw e;
         } finally {
-            // em.close();
+           // em.close();
         }
     }
     
@@ -64,10 +63,19 @@ public class CategoriaDAO {
             //em.close();
         }
     }
-
     public void fechaEmf() {
         em.close();
         Conexao.closeConexao();
     }
+ public Categoria buscarPorChavePrimaria(Integer  lg) {
+        
+        return em.find(Categoria.class, lg);
+    }
+
+
+
+
+
     
+
 }
