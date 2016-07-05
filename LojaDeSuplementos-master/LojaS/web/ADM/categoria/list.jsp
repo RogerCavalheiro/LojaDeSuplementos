@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="dao.CategoriaDAO"%>
+<%@page import="modelo.Categoria"%>
 <%@include file="../cabecalho.jsp"%>
 <!-- gambiarra pra alinhar o botão a esquerda-->
 <style>
@@ -9,7 +12,8 @@
             }
 </style>
 <%
-    
+      CategoriaDAO dao = new CategoriaDAO();
+    List<Categoria> lista = dao.listar();
 
     %>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -17,28 +21,65 @@
         <div class="mdl-card__supporting-text">
             <h4>Categoria</h4>
             <!-- Colored mini FAB button -->
-            
+            <div class="direita">
+                <a href="add.jsp">
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                         <i class="material-icons">add</i>
+                    </button>  
+                </a>
+            </div>
+
             <table class="mdl-data-table mdl-js-data-table">
                 <thead>
                     <tr>
 
-                        <th>Hipercalórico</th>
-                        <th>Whey</th>
-                        <th>Acessórios</th>
-                        <th>BCAA</th>
-                        <th>Creatina</th>
-                        <th>Glutamina</th>
-                        <th>Pré-treino</th>
-                        <th>Termogênico</th>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        
+                        <th>Ações</th>
                     </tr>
                 </thead>
-
-               
+                <tbody>
+                    <%
+                    for(Categoria item:lista){                        
+                    %>
+                    <tr>
+                        <td><%=item.getCategoria()%></td>
+                        <td><%=item.getNomeCategoria()%></td>
+                        
+                        
+                        <td>
+                            <!-- 
+                                Atualizar 
+                            -->
+                            <div id="ttupd" class="icon material-icons">
+                                <i class="material-icons"><a href="upd.jsp?id=<%=item.getNomeCategoria()%>">update</a></i>
+                            </div>
+                            <div class="mdl-tooltip" for="ttupd">
+                                Atualizar
+                            </div>
+                            <!-- 
+                                Excluir 
+                            -->
+                            <div id="ttdel" class="icon material-icons">
+                                <i class="material-icons"><a href="del-ok.jsp?id=<%=item.getNomeCategoria()%>">delete</a></i>
+                            </div>
+                            <div class="mdl-tooltip" for="ttdel">
+                                Excluir
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    <%
+                    }
+                    %>
+                </tbody>
             </table>   
         </div>
 
     </div>
 
+</section>
 </section>
 
 <%@include file="../../rodape.jsp"%>
