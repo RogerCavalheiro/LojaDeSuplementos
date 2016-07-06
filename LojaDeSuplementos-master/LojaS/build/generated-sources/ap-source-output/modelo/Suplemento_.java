@@ -7,7 +7,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import modelo.Categoria;
 import modelo.Supleente;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-07-05T05:31:58")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2016-07-05T23:21:53")
 @StaticMetamodel(Suplemento.class)
 public class Suplemento_ { 
 

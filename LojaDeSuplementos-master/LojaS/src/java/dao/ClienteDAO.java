@@ -69,7 +69,10 @@ public class ClienteDAO {
     }
 
 
-
+public Cliente buscarPorChavePrimaria(Integer  Cliente) {
+        
+        return em.find(Cliente.class, Cliente);
+    }
 
 
 

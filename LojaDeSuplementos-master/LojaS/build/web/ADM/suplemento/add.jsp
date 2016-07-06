@@ -6,6 +6,7 @@
 <%
     CategoriaDAO dao = new CategoriaDAO();
     List<Categoria> Lista = dao.listar();
+    
     %>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
     <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -22,21 +23,21 @@
                 </div>
                     <div class="mdl-cell--12-col"> 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required  id="txtNome" />
-                        <label class="mdl-textfield__label" for="txtNome"> - Nome</label>
+                        <input class="mdl-textfield__input" type="text" required  name="txtNomeSuple" />
+                        <label class="mdl-textfield__label" for="txtNomeSuple"> - Nome</label>
                     </div>
                         
                         <div class="mdl-cell--12-col"> 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="Integer" required  id="txtQuantidade" />
+                        <input class="mdl-textfield__input" type="text" required  name="txtQuantidade" />
                         <label class="mdl-textfield__label" for="txtQuantidade"> - Quantidade</label>
                     </div>
                             
                        <select class="mdl-select__input" id="professsion" name="txtCategoria">
                             <%                            
-                    for (Categoria c : Lista) {
+                    for (Categoria item : Lista) {
                 %>
-                             <option value="<%=c.getCategoria()%>"><%=c%></option> 
+                <option value="<%=item.getCategoria()%>"><%=item%></option> 
                <%} %>   
                
                  </select>

@@ -131,6 +131,7 @@ public final class add_jsp extends org.apache.jasper.runtime.HttpJspBase
     CategoriaDAO dao = new CategoriaDAO();
     List<Categoria> Lista = dao.listar();
     
+    
       out.write("\n");
       out.write("<section class=\"section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp\">\n");
       out.write("    <div class=\"mdl-card mdl-cell mdl-cell--12-col\">\n");
@@ -147,27 +148,27 @@ public final class add_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\n");
       out.write("                    <div class=\"mdl-cell--12-col\"> \n");
       out.write("                    <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n");
-      out.write("                        <input class=\"mdl-textfield__input\" type=\"text\" required  id=\"txtNome\" />\n");
-      out.write("                        <label class=\"mdl-textfield__label\" for=\"txtNome\"> - Nome</label>\n");
+      out.write("                        <input class=\"mdl-textfield__input\" type=\"text\" required  id=\"txtNomeSuple\" />\n");
+      out.write("                        <label class=\"mdl-textfield__label\" for=\"txtNomeSuple\"> - Nome</label>\n");
       out.write("                    </div>\n");
       out.write("                        \n");
       out.write("                        <div class=\"mdl-cell--12-col\"> \n");
       out.write("                    <div class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label\">\n");
-      out.write("                        <input class=\"mdl-textfield__input\" type=\"Integer\" required  id=\"txtQuantidade\" />\n");
+      out.write("                        <input class=\"mdl-textfield__input\" type=\"text\" required  id=\"txtQuantidade\" />\n");
       out.write("                        <label class=\"mdl-textfield__label\" for=\"txtQuantidade\"> - Quantidade</label>\n");
       out.write("                    </div>\n");
       out.write("                            \n");
       out.write("                       <select class=\"mdl-select__input\" id=\"professsion\" name=\"txtCategoria\">\n");
       out.write("                            ");
                             
-                    for (Categoria c : Lista) {
+                    for (Categoria item : Lista) {
                 
       out.write("\n");
-      out.write("                             <option value=\"");
-      out.print(c.getCategoria());
+      out.write("                <option value=\"");
+      out.print(item.getCategoria());
       out.write('"');
       out.write('>');
-      out.print(c);
+      out.print(item);
       out.write("</option> \n");
       out.write("               ");
 } 

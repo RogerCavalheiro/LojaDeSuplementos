@@ -46,7 +46,7 @@
                         
                       
                     </tr>
-                    <%                        for (Suplemento supl: lista) {
+                    <%  for (Suplemento supl: lista) {
 
 
                     %>
@@ -65,7 +65,8 @@
                                 Atualizar 
                             -->
                             <div id="ttupd" class="icon material-icons">
-                                <i class="material-icons"><a href="upd.jsp?LoginJog=<%=supl.getNomeSuple()%>">update</a></i>
+                                <i class="material-icons"><a href="upd.jsp?id=<%=supl.getSuplemento()%>">update</a></i>
+                             
                             </div>
                             <div class="mdl-tooltip" for="ttupd">
                                 Atualizar
@@ -74,7 +75,8 @@
                                 Excluir 
                             -->
                             <div id="ttdel" class="icon material-icons">
-                                <i class="material-icons"><a href="del-ok.jsp?LoginJog=<%=supl.getNomeSuple()%>">delete</a></i>
+                  
+                                <i class="material-icons"><a href="del-ok.jsp?id=<%=supl.getSuplemento()%>">delete</a></i>
                             </div>
                             <div class="mdl-tooltip" for="ttdel">
                                 Excluir

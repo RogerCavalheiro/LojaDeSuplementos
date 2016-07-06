@@ -67,9 +67,9 @@ public class CategoriaDAO {
         em.close();
         Conexao.closeConexao();
     }
- public Categoria buscarPorChavePrimaria(Integer  lg) {
+ public Categoria buscarPorChavePrimaria(Integer  Categoria) {
         
-        return em.find(Categoria.class, lg);
+        return em.find(Categoria.class, Categoria);
     }
 
 

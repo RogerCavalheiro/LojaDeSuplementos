@@ -1,37 +1,26 @@
-<%@page import="java.util.List"%>
 <%@page import="modelo.Categoria"%>
 <%@page import="dao.CategoriaDAO"%>
 <%@include file="../cabecalho.jsp"%>
 
 <%
-String Categoria = request.getParameter("txtCategoria");
+  String categoria = request.getParameter("id");
+  String nomeCategoria = request.getParameter("txtNomeCategoria");
     CategoriaDAO dao = new CategoriaDAO();
-    Categoria obj = new Categoria();
-    String nomeCategoria = request.getParameter("txtNomeCategoria"); 
-    obj.setCategoria(Integer.parseInt(Categoria));
-    obj.setNomeCategoria(nomeCategoria);
+    Categoria obj = dao.buscarPorChavePrimaria(Integer.parseInt(categoria));
     dao.alterar(obj);
-%>
-
+    %>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
     <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
             <h4>Jogador  Atualizar</h4>
-            <form action="upd-ok.jsp" method="post">
-                
-                
+            <form action="upd-ok.jsp" method="post"> 
+         <input type="hidden" name="txtId" value="<%=categoria%>" />       
  </div>
-                    <div class="mdl-cell--12-col"> 
+
+                <div class="mdl-cell--12-col"> 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required  id="txtCategoria" />
-                        <label class="mdl-textfield__label" for="txtCategoria"> - Categoria</label>
-                    </div>
-                                 
-                </div>
-                    <div class="mdl-cell--12-col"> 
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required  id="txtNomeCategoria" />
-                        <label class="mdl-textfield__label" for="txtNomeCategoria"> - Categoria</label>
+                        <input class="mdl-textfield__input" type="text"  name="txtNomeCategoria" value="<%=obj.getNomeCategoria()%>"/>
+                        <label class="mdl-textfield__label" for="txtNomeCategoria">Categoria</label>
                     </div>
                         
    

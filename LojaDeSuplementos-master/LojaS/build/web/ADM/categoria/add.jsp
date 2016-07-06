@@ -9,16 +9,16 @@
             <form action="add-ok.jsp" method="post">
                 
                  </div>
-                    <div class="mdl-cell--12-col"> 
+                     <div class="mdl-cell--12-col"> 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required  id="txtCategoria" />
-                        <label class="mdl-textfield__label" for="txtCategoria"> - ID</label>
+                        <input class="mdl-textfield__input"  disabled required  name="txtCategoria"/>
+                        <label class="mdl-textfield__label" for="txtCategoria">ID - Fornecido pelo sistema</label>
                     </div>
                                  
                 </div>
                     <div class="mdl-cell--12-col"> 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required  id="txtNomeCategoria" />
+                        <input class="mdl-textfield__input" type="text" required  name="txtNomeCategoria" />
                         <label class="mdl-textfield__label" for="txtNomeCategoria"> - Categoria</label>
                     </div>
                         

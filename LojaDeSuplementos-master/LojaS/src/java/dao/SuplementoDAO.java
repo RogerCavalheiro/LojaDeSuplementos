@@ -82,6 +82,10 @@ public class SuplementoDAO {
             //em.close();
         }
     }
+     public Suplemento buscarPorChavePrimaria(Integer Suplemento) {
+        
+        return em.find(Suplemento.class, Suplemento);
+    }
     public void fechaEmf() {
         em.close();
         Conexao.closeConexao();

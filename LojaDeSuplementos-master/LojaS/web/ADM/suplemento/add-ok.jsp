@@ -1,41 +1,39 @@
+<%@page import="org.w3c.dom.Node"%>
+<%@page import="dao.CategoriaDAO"%>
 <%@page import="modelo.Categoria"%>
 <%@page import="modelo.Suplemento"%>
 <%@page import="dao.SuplementoDAO"%>
 <%@include file="../cabecalho.jsp"%>
 <%
+   
     String msg ="";
-    if(request.getParameter("txtNome") == null
-        || request.getParameter("txtCategoria") == null
-        || request.getParameter("txtSuplemento") == null
-        || request.getParameter("txtQuantidade") == null)
-    {
-        response.sendRedirect("add.jsp");
-    }
+  if(        request.getParameter("txtSuplemento") == null
+            || request.getParameter("txtNomeSuple") == null
+            || request.getParameter("txtQuantidade") == null
+           || request.getParameter("txtCategoria") ==null
+            ){
+       response.sendRedirect("add.jsp");
+   }
     else{
-    String Suplemento = request.getParameter("txtSuplemento"); 
-    String NomeSuple = request.getParameter("txtNomeSuple");
-    String Quantidade = request.getParameter("txtQuantidade");
-    String Categoria = request.getParameter("txtCategoria");
-  
-    
-     
-     
-      SuplementoDAO dao = new SuplementoDAO();
-      Suplemento obj = new Suplemento();
-    
-      
-                         obj.setSuplemento(Integer.parseInt(Suplemento)); 
-                         obj.setNomeSuple(NomeSuple); 
-                         obj.setQuantidade(Integer.parseInt(Quantidade)); 
-                         Categoria categ = new Categoria();
-                         categ.setCategoria(Integer.parseInt(Categoria));
-                        
-        
+
+       String nomeSuple = request.getParameter("txtNomeSuple");
+        String quantidade = request.getParameter("txtQuantidade");
+        String categoria = request.getParameter("txtCategoria");
+        Categoria c = new Categoria();
+        c.setCategoria(Integer.parseInt(categoria));
+        SuplementoDAO dao = new SuplementoDAO();
+        Suplemento obj = new Suplemento();
+
+      obj.setNomeSuple(nomeSuple);
+       obj.setQuantidade(Integer.parseInt(quantidade));
+       obj.setCategoria(c);
+        dao.incluir(obj);
+
         try{
-            dao.incluir(obj);
+           dao.incluir(obj);
             msg ="Registro cadastrado com sucesso";
         }
-        catch(Exception ex){
+       catch(Exception ex){
             msg ="Erro ao cadastrar registro";
         }
     }

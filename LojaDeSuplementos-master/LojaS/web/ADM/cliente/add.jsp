@@ -12,10 +12,24 @@
 
             <form action="add-ok.jsp" method="post">
                 
+                    <div class="mdl-cell--12-col"> 
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input"  disabled required  name="txtCliente" />
+                        <label class="mdl-textfield__label" for="txtCliente">ID - Fornecido pelo sistema</label>
+                    </div>
+                       
+                
                 <div class="mdl-cell--12-col"> 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" name="txtCliente" required  id="txtCategoria" />
-                        <label class="mdl-textfield__label" for="txtCliente">Nome</label>
+                        <input class="mdl-textfield__input" type="text" name="txtNome" required  id="txtCategoria" />
+                        <label class="mdl-textfield__label" for="txtNome">Nome</label>
+                    </div>
+                </div>
+                
+                <div class="mdl-cell--12-col"> 
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="txtEmail" required  id="txtCategoria" />
+                        <label class="mdl-textfield__label" for="txtEmail">Email</label>
                     </div>
                 </div>
              
@@ -38,4 +52,4 @@
 
 
 
-<%@include file="../rodape.jsp"%>
+<%@include file="../rodape-index.jsp"%>

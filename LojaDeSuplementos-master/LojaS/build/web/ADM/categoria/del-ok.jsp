@@ -2,11 +2,9 @@
 <%@page import="dao.CategoriaDAO"%>
 <%@include file="../cabecalho.jsp"%>
 <%
-    String categoria = request.getParameter("lg");
-    String nomeCategoria = request.getParameter("txtNomeCategoria");
+   String categoria = request.getParameter("id");
     CategoriaDAO dao = new CategoriaDAO();
     Categoria obj = dao.buscarPorChavePrimaria(Integer.parseInt(categoria));
-    obj.setNomeCategoria(nomeCategoria);
     dao.excluir(obj);
 %>
 
@@ -22,4 +20,4 @@
     </div>
 </section>
 
-<%@include file="../../rodape.jsp"%>
+<%@include file="../rodape-index.jsp"%>

@@ -2,23 +2,22 @@
 <%@page import="modelo.Categoria"%>
 <%@include file="../cabecalho.jsp"%>
 <%
+ 
     String msg ="";
-    if(request.getParameter("txtNomeCategoria") == null
-            || (request.getParameter("txtCategoria") == null)){
+    if(
+            request.getParameter("txtNomeCategoria") == null){
         response.sendRedirect("add.jsp");
     }
     else{
-    
-    String nomeCategoria = request.getParameter("txtNomeCategoria");
-    String categoria = request.getParameter("txtCategoria");
-    
-     
-     
-      CategoriaDAO dao = new CategoriaDAO();
-      Categoria obj = new Categoria();
-    
-                         obj.setNomeCategoria(nomeCategoria);
-                        obj.setCategoria(Integer.parseInt(categoria));
+        
+        String nomeCategoria = request.getParameter("txtNomeCategoria");
+        
+        CategoriaDAO dao = new CategoriaDAO();
+        Categoria obj = new Categoria();
+        
+        obj.setNomeCategoria(nomeCategoria);
+        
+        dao.incluir(obj);
         
         try{
             dao.incluir(obj);
@@ -28,7 +27,6 @@
             msg ="Erro ao cadastrar registro";
         }
     }
-      
 %>
 
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -45,5 +43,5 @@
 
 </section>
 
-<%@include file="../../rodape.jsp"%>
+<%@include file="../rodape-index.jsp"%>
 

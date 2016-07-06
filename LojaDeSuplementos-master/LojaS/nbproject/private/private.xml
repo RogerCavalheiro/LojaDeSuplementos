@@ -3,10 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/java/dao/Conexao.java</file>
-            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/conf/persistence.xml</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/cliente/upd-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/categoria/add-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/java/modelo/Categoria.java</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/categoria/list.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/java/dao/SuplementoDAO.java</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/java/dao/ClienteDAO.java</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/cliente/list.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/categoria/upd-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/suplemento/upd-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/categoria/add.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/cliente/add-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/categoria/upd.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/cliente/add.jsp</file>
             <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/suplemento/add.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/java/modelo/Suplemento.java</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/cliente/upd.jsp</file>
             <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/suplemento/add-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/suplemento/del-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/cabecalho.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/suplemento/upd.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/java/dao/CategoriaDAO.java</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/categoria/del-ok.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/web/ADM/suplemento/list.jsp</file>
+            <file>file:/C:/Users/TurtleDAO/Desktop/LojaDeSuplementos-master/LojaDeSuplementos-master/LojaS/src/java/dao/SupleenteDAO.java</file>
         </group>
     </open-files>
 </project-private>

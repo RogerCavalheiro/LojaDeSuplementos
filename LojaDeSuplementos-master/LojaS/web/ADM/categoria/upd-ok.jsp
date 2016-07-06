@@ -1,30 +1,20 @@
 <%@page import="modelo.Categoria"%>
 <%@page import="dao.CategoriaDAO"%>
 <%@include file="../cabecalho.jsp"%>
-
 <%
-
-    if (request.getParameter("txtCategoria") == null || request.getParameter("txtNomeCategoria") == null) {
-
-        response.sendRedirect("list.jsp");
-
-        return;
-
-    }
-    
-    String Categoria = request.getParameter("txtCategoria");
+    String categoria = request.getParameter("id");
     String nomeCategoria = request.getParameter("txtNomeCategoria");
+  
+    
     
     CategoriaDAO dao = new CategoriaDAO();
+    Categoria obj = dao.buscarPorChavePrimaria(Integer.parseInt(categoria));
     
-    Categoria obj = dao.buscarPorChavePrimaria(Integer.parseInt("lg"));
-    obj.setCategoria(Integer.parseInt(Categoria));
-    obj.setNomeCategoria(nomeCategoria);
-    
-    dao.incluir(obj);
-    
-    
-
+   obj.setCategoria(Integer.parseInt(categoria));
+   obj.setNomeCategoria(nomeCategoria);
+           
+           
+    dao.alterar(obj);
 %>
 
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
